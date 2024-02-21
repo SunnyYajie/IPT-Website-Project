@@ -9,16 +9,36 @@ html{
     scroll-behavior: smooth;
 }
 
-body{
-    background: #333356;
-    color: white;
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    background-image: radial-gradient(circle at top right, rgba(121, 68, 154, 0.13),       transparent),
+        radial-gradient(circle at 20% 80%, rgba(81, 81, 82, 0.13), transparent)
+    }
+canvas {
+    position: fixed;
+    width: 100%;
+    height: 100%;
 }
+    
+/* a {
+    position: absolute;
+    bottom: 2vmin;
+    right: 2vmin;
+    color: rgba(255,255,255,0.2);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff;
+} */
 
 /* ========================== Home/Header Section ========================== */
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(images/Spacebgorig.gif);
+    /* background-image: url(images/Spacebgorig.gif); */
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -41,14 +61,14 @@ nav{
     position: fixed;
     top: 0;
     width: 80%;
-    background-color: #363656ce ;
+    background-color: #333356b9;
     border-radius: 15px;
     padding: .3rem 3rem;
     z-index: 2;
 }
 
 .logo{
-    width: 70px;
+    width: 90px;
 }
 
 nav ul li{
@@ -60,7 +80,7 @@ nav ul li{
 nav ul li a{
     color: #D0E5E8;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
     position: relative;
     font-weight: 500;
 }
@@ -83,27 +103,61 @@ nav ul li a:hover::after{
 
 /* ========================== Contains All Of The Home/Header Text ========================== */
 .header-bg{
-    margin-top: 10rem;
-    background-color: #363656ce ;
+    margin-top: 8rem;
+    background-color: #333356b9;
     padding: 5%;
     border-radius: 35px;
 }
 
 .header-text{
+    color: white;
     font-size: 25px;
 }
 
+.red{
+    color: rgb(228, 64, 64);
+}
+.orange{
+    color: orange;
+}
+.yellow{
+    color: yellow;
+}
+
+.green{
+    color: rgb(21, 156, 21);
+}
+
+.blue{
+    color: rgb(33, 149, 243);
+}
+.violet{
+    color: rgb(143, 4, 143);
+}
+
+.logo2-container{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.logo2{
+    width: 400px;
+}
+
 .header-text h1{
+    text-align: center;
     font-size: 45px;
     margin-top: 20px;
 }
 
 .name{
-    color: #46e6e0;
+    color: white;
 }
 
 .profession{
-    color: #ff9900;
+    color: black;
 }
 
 .header-text p{
@@ -120,7 +174,7 @@ nav ul li a:hover::after{
 }
 
 #about{
-    padding-top: 4rem;
+    padding-top: 2rem;
     padding-bottom: 6rem;
     color: #D0E5E8;
     z-index: 1;
@@ -141,7 +195,7 @@ nav ul li a:hover::after{
 .about-me{
     font-size: 60px;
     font-weight: 600;
-    color: #42cfca;
+    color: #ffffff;
 }
 
 .about-col2{
@@ -151,8 +205,8 @@ nav ul li a:hover::after{
 
 .about-col2 img{
     width: 100%;
-    border-radius: 26% 74% 23% 77% / 79% 22% 78% 21% ;
 }
+
 
 .monologue{
     margin-top: 2rem;
@@ -243,19 +297,19 @@ nav ul li a:hover::after{
 }
 
 .skill-item .skill-bar .bar-inner#ui{
-    width: 70%;
+    width: 50.71%;
 }
 .skill-item .skill-bar .bar-inner#html{
-    width: 85%;
+    width: 20.29%;
 }
 .skill-item .skill-bar .bar-inner#python{
-    width: 80%;
+    width: 15.57%;
 }
 .skill-item .skill-bar .bar-inner#csharp{
-    width: 75%;
+    width: 5.43%;
 }
-.skill-item .skill-bar .bar-inner#java{
-    width: 80%;
+.skill-item .skill-bar .bar-inner#other-countries{
+    width: 8%;
 }
 
 /* ========================== Education Tab In About Section ========================== */
@@ -280,7 +334,7 @@ nav ul li a:hover::after{
 }
 
 #portfolio{
-    padding-top: 3rem;
+    padding-top: 1rem;
     padding-bottom: 1rem;
 }
 
@@ -302,7 +356,7 @@ nav ul li a:hover::after{
 .sub-title{
     font-size: 60px;
     font-weight: 600;
-    color: #42cfca;
+
 }
 
 .tab-links2{
@@ -314,11 +368,12 @@ nav ul li a:hover::after{
 .tab-links2::after{
     content: '';
     width: 0;
-    height: 5rem;
-    background: radial-gradient(rgba(84, 84, 123, 0.164), rgba(2, 29, 44, 0.548));
+    height: 4rem;
+    background: #333356b9;
+    /* background: linear-gradient(rgba(255, 255, 255, 0.164), rgba(127, 202, 243, 0.548)); */
     position: absolute;
     left: 0;
-    bottom: -6px;
+    bottom: 3px;
     transition: 0.5s;
     border-radius: 5px;
     z-index: -1;
@@ -358,7 +413,7 @@ nav ul li a:hover::after{
     background: #42cfca;
 }
 
-/* ========================== Project Tab In Portfolio ========================== */
+/* ========================== Games Tab In Portfolio ========================== */
 .portfolio-list{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -368,6 +423,7 @@ nav ul li a:hover::after{
 
 .work{
     border-radius: 10px;
+    height: 18rem;
     position: relative;
     overflow: hidden;
 }
@@ -380,7 +436,7 @@ nav ul li a:hover::after{
 }
 
 .work:hover img{
-    transform: scale(1.1);
+    transform: scale(.9);
 }
 
 .layer{
@@ -390,7 +446,7 @@ nav ul li a:hover::after{
     border-radius: 10px;
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 1px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -402,15 +458,18 @@ nav ul li a:hover::after{
 }
 
 .work:hover .layer{
-    height: 105%;
+    bottom: 1px;
+    height: 100%;
 }
 
 .layer h3{
+    color: white;
     font-weight: 900;
     margin-bottom: 1rem;
 }
 
 .layer p{
+    color: white;
     font-weight: 800;
     margin-bottom: 1rem;
 }
@@ -428,7 +487,7 @@ nav ul li a:hover::after{
     text-align: center;
 }
 
-/* ========================== Achievements Tab In Portfolio ========================== */
+/* ========================== Shows Tab In Portfolio ========================== */
 .carousel-body{
     width: 105%;
     display: flex;
@@ -467,6 +526,7 @@ nav ul li a:hover::after{
     object-fit: cover;
     transition: width 1s;
 }
+
 .slide > .photo:hover > img{
     width: 100%;
     transition: all 1s ease 1s;
@@ -524,8 +584,12 @@ nav ul li a:hover::after{
 }
 
 /* ========================== Footer/Contacts Section ========================== */
+#contact{
+    margin-top: 15rem;
+}
+
 .contact-left h1{
-    color: #42cfca;
+    color: white;
 }
 
 .contact-left{
@@ -533,11 +597,12 @@ nav ul li a:hover::after{
 }
 
 .contact-left p{
+    color: white;
     margin-top: 1rem;
 }
 .contact-left i{
     margin-right: 1rem;
-    color:#42cfca;
+    color:white;
 }
 
 .contact-right{
@@ -558,11 +623,13 @@ nav ul li a:hover::after{
 }
 
 .social-icons i{
+    position: relative;
+    z-index: 1;
     animation: glow 2s ease infinite;
 }
 
 .social-icons i:hover{
-    color: #42cfca;
+    color: #8a8aeef3;
     transform: translateY(-6px);
 }
 
@@ -572,32 +639,38 @@ nav ul li a:hover::after{
     margin-top: 1rem;
     cursor: pointer;
     padding: 1rem 3rem;
+    border-color: #1e1e44f3;
+    position: relative;
+    z-index: 1;
 }
 
 .btn:hover{
     transform: scale(1.1);
-    background: #42cfca9f;
+    background: #333356f3;
 }
 
 form input, form textarea{
     width: 100%;
-    border: 1px solid #42cfca;
+    border: 1px solid #0c0c36f3;
     outline: none;
-    background: #54547b;
+    background: #333356b9;
     padding: 15px;
     margin: 1rem 0;
     color: white;
     font-size: 18px;
     border-radius: .6rem;
+    position: relative;
+    z-index: 1;
 }
 
 .copyright{
     width: 100%;
     text-align: center;
     padding: 25px 0;
-    background: #54547b;
+    background: #333356b9;
     font-weight: 300;
-    margin-top: 2rem;
+    margin-top: 5rem;
+    color: white;
 }
 
 #msg{
